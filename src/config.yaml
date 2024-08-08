@@ -1,6 +1,6 @@
 site:
   name: 梅花易
-  site: 'https://main--zesty-paletas-dc2df2.netlify.app'
+  site: 'https://meihuayi.com'
   base: '/'
   trailingSlash: false
 
@@ -44,7 +44,7 @@ apps:
 
     list:
       isEnabled: true
-      pathname: 'blog' # Blog main path, you can change this to "articles" (/articles)
+      pathname: '博客' # Blog main path, you can change this to "articles" (/articles)
       robots:
         index: true
 
