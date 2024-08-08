@@ -1,6 +1,6 @@
 ---
 title: 学习第1层物理层知识
-published: 2024-07-31
+publishDate: 2024-07-31
 description: 本文详细介绍了计算机网络中物理层的定义、组成、作用、信号传输方式及其标准和性能指标。
 image: /images/physical-layer.webp
 tags: [网络, 物理层, OSI模型, 传输介质, 信号传输]
