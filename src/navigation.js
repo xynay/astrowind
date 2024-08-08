@@ -159,7 +159,7 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/xynay/astrowind' },
   ],
   footNote: `
-    <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="/public/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
-    <p>© 2024 梅花易</p> · All rights reserved.
+    <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="../public/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
+    © 2024 梅花易 · All rights reserved.
   `,
 };
