@@ -1,14 +1,7 @@
 ---
-import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
-
 import Layout from '~/layouts/PageLayout.astro';
-import BlogList from '~/components/blog/List.astro';
-import Pagination from '~/components/blog/Pagination.astro';
-
-
-type Props = InferGetStaticPropsType<typeof GetStaticPaths>;
-
-const { page } = Astro.props as Props;
+import Hero from '~/components/widgets/Hero.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
 const metadata = {
   title: '梅花易 — 个人博客、技术分享、生活记录',
@@ -17,12 +10,34 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-    <BlogList posts={page.data} />
-    <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
-    <!--
-      <PostTags tags={allCategories} class="mb-2" title="Search by Categories:" isCategory />
-      <PostTags tags={allTags}  title="Search by Tags:" />
-    -->
-  </section>
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get template',
+        href: 'https://github.com/onwidget/astrowind',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+      { text: 'Learn more', href: '#features' },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+  >
+    <Fragment slot="title">
+      Free template for <span class="hidden xl:inline">creating websites with</span>
+      <span class="text-accent dark:text-white highlight"> Astro 4.0</span> + Tailwind CSS
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 4.0
+        + Tailwind CSS.</span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
+      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
+      Blogs.
+    </Fragment>
+  </Hero>
+  <!-- Blog Latest Posts Widget *************** -->
+  <BlogLatestPosts />
 </Layout>
